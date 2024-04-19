@@ -59,6 +59,12 @@ function draw() {
   // }
 }
 
+function keyPressed() {
+    if(key == 's'){
+      saveCanvas('background_v2', 'png');
+    }
+  }
+
 // Update image index
 function updateImageIndex() {
   if(frameCount % 15 == 0){
