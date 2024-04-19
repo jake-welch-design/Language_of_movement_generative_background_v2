@@ -1,3 +1,6 @@
+let fps = 60;
+let vidLength = 30;
+
 // Global variables
 let imageLoadLayer;
 
@@ -29,7 +32,10 @@ function setup() {
 }
 
 // Draw on canvas
-function draw() {
+// function draw() {
+//   if (frameCount === 1) {
+//     capturer.start();
+//   }
   rectMode(CENTER);
   updateImageIndex();
   updateImageLayer();
@@ -44,11 +50,18 @@ function draw() {
   // noSmooth();
   // image(imageLoadLayer,200,0,200,200);
   // pop();
+
+  // if (frameCount < fps * vidLength) {
+  //   capturer.capture(canvas);
+  // } else if (frameCount === fps * vidLength) {
+  //   capturer.save();
+  //   capturer.stop();
+  // }
 }
 
 // Update image index
 function updateImageIndex() {
-  if(frameCount % 2 == 0){
+  if(frameCount % 15 == 0){
     imgIndex = floor(random(0,imgAmt)); 
   }
 }
