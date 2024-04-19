@@ -32,7 +32,7 @@ function setup() {
 }
 
 // Draw on canvas
-// function draw() {
+function draw() {
 //   if (frameCount === 1) {
 //     capturer.start();
 //   }
